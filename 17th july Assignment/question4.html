@@ -1,0 +1,114 @@
+<!--
+Question 4: 
+            Make a Calculator in Javascript which can do operations as Addtion,
+Subtraction, Multiplication, Division, Square root, Percentage. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function dis(val)
+    {
+        document.getElementById("screen").value += val;
+    }
+    function execute()
+    {
+        let obtainvalue = document.getElementById("screen").value;
+        let y = eval(obtainvalue);
+        document.getElementById("screen").value = y;
+    }
+    function clr()
+    {
+        document.getElementById("screen").value = "";
+    }
+    function sqroot()
+    {
+        let a = document.getElementById("screen").value;
+        let res = Math.sqrt(a);
+        document.getElementById("screen").value = res;
+    }
+    function persentage()
+    {
+        let obtainvalue = document.getElementById("screen").value;
+        let res = eval(obtainvalue)*100;
+        document.getElementById("screen").value = res;
+    }
+</script>
+
+<body>
+    <p> Question 4: Make a Calculator in Javascript which can do operations <br>
+        as Addtion, Subtraction, Multiplication, Division, Square root, Percentage.
+    </p>
+    <hr>
+    <table border="1">
+        <caption>Calculator</caption>
+        <tr>
+            <td colspan="4"><input type="text" id="screen"></td>
+            
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="clr()"></td>
+            <td><input type="button" value="%" onclick="persentage()"></td>
+            <td><input type="button" value="Sqrt" onclick="sqroot()"></td>
+            <td><input type="button" value="/" onclick="dis('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="dis('7')"></td>
+            <td><input type="button" value="8" onclick="dis('8')"></td>
+            <td><input type="button" value="9" onclick="dis('9')"></td>
+            <td><input type="button" value="*" onclick="dis('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="dis('4')"></td>
+            <td><input type="button" value="5" onclick="dis('5')"></td>
+            <td><input type="button" value="6" onclick="dis('6')"></td>
+            <td><input type="button" value="-" onclick="dis('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="dis('1')"></td>
+            <td><input type="button" value="2" onclick="dis('2')"></td>
+            <td><input type="button" value="3" onclick="dis(3)"></td>
+            <td><input type="button" value="+" onclick="dis('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="." onclick="dis('.')"></td>
+            <td><input type="button" value="0" onclick="dis('0')"></td>
+            <td><input type="button" value="#" onclick="dis('#')"></td>
+            <td><input type="button" value="=" onclick="execute()"></td>
+        </tr>
+        
+    </table>
+</body>
+</html>
+
+<style>
+    
+    input[type="button"] 
+         { 
+         background-color:gray; 
+         color: white; 
+         border: solid cadetblue 2px; 
+         width:100% ;
+         padding: 20px;
+         } 
+
+         input[type="text"] 
+         { 
+         background-color:greenyellow; 
+         color: black; 
+         border: solid green 2px; 
+         width:84% ;
+         padding: 18px;;
+        
+         } 
+        hr{
+            border: 2px solid green;
+            
+         }
+</style>

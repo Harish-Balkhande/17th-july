@@ -1,0 +1,53 @@
+<!--
+Question 8: Replace Function Expressions with arrow functions in the code below: 
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Question 8: <br>
+        function ask(question, yes, no)
+        { <br>
+            if(confirm(question)) <br>
+                yes(); <br>
+            else <br>
+                no(); <br>
+        } <br>
+        ask( <br>
+            "Do you agree?", <br>
+            function()
+            {<br>
+                alert("you agreed.");<br>
+            }, <br>
+
+            function()
+            { <br>
+                alert("you cancled the execution."); <br>
+            } <br>
+        )
+    </p>
+    <hr>
+
+    <script>
+        function ask(question, yes, no){if(confirm(question))yes();else no()} ;
+        ask(
+            "Do you agree?",
+            function()
+            {
+                alert("you agreed.");
+            },
+
+            function()
+            {
+                alert("you cancled the execution.");
+            }
+        )
+    </script>
+</body>
+</html>
